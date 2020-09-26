@@ -1,0 +1,90 @@
+body{
+    display: block;
+    background-color: transparent;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+  
+    font-family: 'Times New Roman', Times, serif;
+}
+textarea {
+  overflow: auto;
+}
+
+
+.menu-spacer {
+    flex: 1 1 auto;
+  }
+ 
+mat-toolbar{
+  background-color:rgb(63, 81, 181);
+  position:fixed;
+  z-index:2;
+  top:0;
+  right: 0;
+  width: 100%;
+color: #fff;
+border-bottom: rgb(0, 0, 0);
+-webkit-box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+        }
+
+ 
+ mat-sidenav-container {
+ margin-top: 60px;
+}
+
+mat-sidenav{
+  width: 210px;
+  background-color: rgba(255, 255, 255, 0.966);
+}
+
+.heading{
+ 
+  width:100%;
+  height:70px;
+  background-color:rgb(63, 81, 181);
+  color: rgb(255, 255, 255);  
+}
+.title{
+  padding-top: 24px;
+  padding-right: 10px;
+  word-spacing: 8px;
+  font-size: 20px;
+color: snow;
+font-family: 'Times New Roman', Times, serif;
+ 
+}
+.title1{
+  padding-top: 24px;
+  padding-left: 10px;
+  
+  font-size: 20px;
+color: snow;
+font-family: 'Times New Roman', Times, serif;
+ 
+}
+
+img{
+  border-radius: 50%;
+  height:40px;
+  width:40px;
+}
+ .copy{
+   margin-left:20px;
+   margin-top: 18px;
+  height:35px;
+  }
+  
+  
+
+ 
+ .app{
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 25px;
+   padding-left: 15px;
+ }

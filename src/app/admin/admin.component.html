@@ -1,0 +1,40 @@
+<mat-toolbar>
+    <mat-toolbar-row  fxLayoutAlign="space-between center"class="toolrow">
+          <div fxLayout="row">
+                 
+                        <button mat-button  matTooltip="Redirect you to home page">
+                                <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                                <span class="app">Waitlist Application</span>
+                        </button>
+            
+                        </div>
+        <div fxLayoutAlign="space-between center"class="toolrow">
+            <div  *ngIf="userDetails">
+              <span class="title">Welcome    {{userDetails.fullName}} </span>
+      
+              </div>
+              <div  *ngIf="userDetails">
+                <button mat-button (click)="onLogout()"><mat-icon>logout</mat-icon></button>
+                </div>
+                  
+  </div>
+  </mat-toolbar-row> 
+                
+  </mat-toolbar>
+    
+  <div class="wrapper" style="margin-top: 100px;" >
+    <div id="formContent">
+      <span>
+        <h2 class="underlineHover"  routerLink="/view"  routerLinkActive="active"> View   </h2>
+  
+      <h2 class="underlineHover"  routerLink="/update"  routerLinkActive="active">  Update </h2>
+      <h2 class="underlineHover"  routerLink="/delete"  routerLinkActive="active">  Delete </h2>
+  
+      <h2 class="underlineHover"  routerLink="/create"  routerLinkActive="active"> Create </h2>
+      </span>
+      <router-outlet></router-outlet>
+      
+    </div>
+  </div>
+        
+                

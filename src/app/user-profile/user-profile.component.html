@@ -1,0 +1,55 @@
+<mat-toolbar>
+  <mat-toolbar-row  fxLayoutAlign="space-between center"class="toolrow">
+        <div fxLayout="row">
+               
+                      <button mat-button  matTooltip="Redirect you to home page">
+                              <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+                              <span class="app">Waitlist Application</span>
+                      </button>
+          
+                      
+            
+      </div>
+      <div fxLayoutAlign="space-between center"class="toolrow">
+          <div  *ngIf="userDetails">
+            <span class="title">Welcome    {{userDetails.fullName}} </span>
+    
+            </div>
+ 
+            
+        
+        <button mat-icon-button>
+            <img [src]=userDetails.avatar (click)="fileInput.click()" *ngIf="userDetails">
+            <button hidden  (click)="openDialog()" #fileInput>hai</button>
+        </button>  
+       
+            
+        
+</div>
+</mat-toolbar-row> 
+              
+</mat-toolbar>
+  
+        
+    <mat-sidenav-container fullscreen>
+                    <mat-sidenav-content>
+                <div *ngIf="!deviceXs"fxLayout="row" fxLayoutAlign=" space-between" class="heading">
+                <div  *ngIf="userDetails" fxLayout="row" > <span class="title1"><h3>unique Referal Code: {{userDetails.ref}}</h3></span> </div>
+                   
+<div fxLayout="row" *ngIf="userDetails">
+    <button class="copy"[cdkCopyToClipboard]="userDetails.ref" mat-raised-button color="basic">
+    copy to clipboard</button>
+</div>
+<!-- <button [cdkCopyToClipboard]="userDetails.ref">Copy to clipboard</button> -->
+
+                </div>
+               
+                  <div>
+                      <router-outlet></router-outlet>
+                  </div>
+           </mat-sidenav-content>
+           
+    </mat-sidenav-container>
+  
+    
+    

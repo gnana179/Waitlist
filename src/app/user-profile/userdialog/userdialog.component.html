@@ -1,0 +1,27 @@
+
+    
+ <button class="close" mat-button (click)="onNoClick()"><mat-icon>close</mat-icon></button>
+ 
+<div fxLayoutAlign="space-between centre">
+  
+<div fxLayout="column" fxLayoutGap="15px">
+  
+    <h1 style="padding: top 20px;">Profile Details</h1>
+  
+          
+                <form [formGroup]="form" (ngSubmit)="submitForm()">
+                        <img [src]=userDetails.avatar (click)="fileInput.click()" *ngIf="userDetails">
+                        <input hidden type="file" (change)="uploadFile($event)" #fileInput>
+                        <button mat-button>update image</button>
+
+                       
+                </form>
+               
+                  
+                  <div *ngIf="userDetails">
+                    <h1> {{userDetails.fullName}}</h1>
+                    <span class="email">{{userDetails.email}}</span>
+                  
+                  </div>
+                  <button mat-button (click)="onLogout()">Logout</button>
+</div>

@@ -1,0 +1,62 @@
+<div>
+  <img class="lazyload" src="../../../assets/images/user.png" id="icon" alt="User Icon" />
+</div>
+<form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+  <mat-form-field appearance="outline" style="width: 70%;">
+    <mat-label>Username</mat-label>
+    <input matInput type="text" #fullName="ngModel" [(ngModel)]="userService.selectedUser.fullName" name="fullName" placeholder="Full Name"
+  required  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !fullName.valid }">
+    <mat-icon matSuffix>account_circle</mat-icon>
+  </mat-form-field>
+  <div *ngIf="signUpForm.submitted && !fullName.valid">
+    <label class="validation-message">This field is required.</label>
+  </div>
+  
+  
+  <mat-form-field appearance="outline" style="width: 70%;">
+    <mat-label>E-mail</mat-label>
+    <input matInput  type="text" #email="ngModel" [(ngModel)]="userService.selectedUser.email" name="email" placeholder="Email"
+    required [pattern]="emailRegex"  [ngClass]="{'invalid-textbox' :signUpForm.submitted && !email.valid }">
+    <mat-icon matSuffix>email</mat-icon>
+  </mat-form-field>
+  <div *ngIf="signUpForm.submitted && email.errors">
+    <label *ngIf="email.errors.required" class="validation-message">This field is required.</label>
+    <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
+  </div>
+
+  <mat-form-field appearance="outline" style="width: 70%;">
+    <mat-label>ReferalCode</mat-label>
+  <input matInput type="text" #frndref="ngModel" [(ngModel)]="userService.selectedUser.frndref" name="frndref" placeholder="Enter Your Friends Referal Code"
+   [ngClass]="{'invalid-textbox' :signUpForm.submitted && !fullName.valid }">
+    <mat-icon matSuffix>edit_attributes</mat-icon>
+  </mat-form-field>
+  
+
+  <mat-form-field appearance="outline" style="width: 70%;">
+    <mat-label>Enter your password</mat-label>
+    <input matInput type="password" #password="ngModel" [(ngModel)]="userService.selectedUser.password" name="password" placeholder="Password"
+  minlength="4" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
+  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  <div *ngIf="signUpForm.submitted && password.errors">
+   <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
+    <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+  </div>
+  <input type="submit" value="Sign Up"> 
+  
+</form>
+
+
+    
+    <!-- Success message -->
+    <div class="success" *ngIf="showSucessMessage">
+      Saved successfully
+    </div>
+    
+    <!-- Error message -->
+    <div class="alert" *ngIf="serverErrorMessages">
+      {{serverErrorMessages}}
+    </div>
+

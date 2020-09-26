@@ -1,0 +1,30 @@
+<table *ngIf="ItemsArray" class="table-fill" style="margin-top: 10px;">
+    <thead>
+        <tr>
+            <th colspan="3" class="text-center">Your Positions  at the system</th>
+        </tr>
+        <tr>
+          <th style="background-color: rgba(145, 144, 143, 0.534);">UserName</th>
+          <th style="background-color: rgba(145, 144, 143, 0.534);">Email Address</th>
+          <th style="background-color: rgba(145, 144, 143, 0.534);">current Position</th>
+        
+          
+          
+      </tr>
+    </thead>
+    <tbody>
+     
+        <tr *ngFor="let user of ItemsArray.users" class="row">
+          <td >{{ user.fullName }}</td>
+          <td>{{ user.email}}</td>
+          <td>{{ user.position }}</td>
+          
+        </tr>
+      
+        
+       
+      
+    </tbody>
+  </table>
+
+

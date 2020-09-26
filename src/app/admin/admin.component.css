@@ -1,0 +1,137 @@
+body{
+    display: block;
+    background-color:rgb(54, 55, 100);
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+  
+    font-family: 'Times New Roman', Times, serif;
+}
+textarea {
+  overflow: auto;
+}
+
+
+.menu-spacer {
+    flex: 1 1 auto;
+  }
+ 
+mat-toolbar{
+  background-color:rgb(173, 45, 146);
+  position:fixed;
+  z-index:2;
+  top:0;
+  right: 0;
+  width: 100%;
+color: #fff;
+border-bottom: rgb(0, 0, 0);
+-webkit-box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 24px 38px 3px rgba(0, 0, 0, 0.14), 0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px -7px rgba(0, 0, 0, 0.2);
+        }
+
+ 
+ mat-sidenav-container {
+ margin-top: 60px;
+}
+
+mat-sidenav{
+  width: 210px;
+  background-color: rgba(255, 255, 255, 0.966);
+}
+
+.heading{
+ 
+  width:100%;
+  height:70px;
+  background-color:rgb(63, 81, 181);
+  color: rgb(255, 255, 255);  
+}
+.title{
+  padding-top: 24px;
+  padding-right: 10px;
+  word-spacing: 8px;
+  font-size: 20px;
+color: snow;
+font-family: 'Times New Roman', Times, serif;
+ 
+}
+.title1{
+  padding-top: 24px;
+  padding-left: 10px;
+  
+  font-size: 20px;
+color: snow;
+font-family: 'Times New Roman', Times, serif;
+ 
+}
+
+img{
+  border-radius: 50%;
+  height:40px;
+  width:40px;
+}
+ .copy{
+   margin-left:20px;
+   margin-top: 18px;
+  height:35px;
+  }
+  
+  
+
+ 
+ .app{
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 25px;
+   padding-left: 15px;
+ }
+
+
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+  padding: 0px;
+}
+
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: rgb(224, 116, 167);
+  padding: 0px;
+  width: 100%;
+  max-width: 650px;
+  position: relative;
+  padding: 00px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+#formFooter {
+  background-color: #f18bcf;
+  border-top: 2px solid #000000;
+  padding: 20px;
+  text-align: center;
+  -webkit-border-radius: 0 0 10px 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+
+
+/* TABS */
+
+h2.inactive {
+  color: #f8f8f8;
+}
+
+h2.active {
+  color: #117b96;
+  
+}
