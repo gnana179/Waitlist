@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(cors({origin:"*"}));
 
 const rtsIndex = require('./routes/index.router');
-const userRoute = require('./routes/image.router');
+
 const { db } = require('./models/user.model');
 
 app.use('/api', rtsIndex);
@@ -37,7 +37,7 @@ app.use((err, req, res, next) => {
 app.use('/public', express.static('public'));
 
 // API Route
-app.use('/api',userRoute)
+
 
 // Error favicon.ico
 app.get('/favicon.ico', (req, res) => res.status(204));

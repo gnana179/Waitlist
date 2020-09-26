@@ -4,7 +4,7 @@ const User = mongoose.model('User');
 let referralCodeGenerator = require('referral-code-generator');
 const fs=require('fs');
 const _ = require('lodash');
-const imageModel = require('../models/image.model');
+
 
 module.exports.register = (req, res, next) => {
     var ref=referralCodeGenerator.custom('lowercase',5,6,req.body.email);
